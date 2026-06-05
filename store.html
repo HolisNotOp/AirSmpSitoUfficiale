@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Store | AirSmp Minecraft Premium</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#080c14',
+                        darkcard: '#0f1626',
+                        darkcard2: '#141d33',
+                        skyblue: '#00a2ff',
+                        blurple: '#5865F2',
+                        discordyellow: '#FEE75C',
+                        violaVip: '#a855f7',
+                        magentaVip: '#d946ef',
+                        goldVip: '#fbbf24'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { background-color: #080c14; color: #f3f4f6; -webkit-tap-highlight-color: transparent; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-12px); } 100% { transform: translateY(0px); } }
+        .floating { animation: float 5s ease-in-out infinite; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #080c14; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00a2ff; }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <div id="account-modal" class="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm bg-black/60 px-4">
+        <div class="bg-gradient-to-br from-darkcard to-darkbg border border-white/10 rounded-2xl w-full max-w-md shadow-2xl relative transform scale-95 transition-transform duration-300" id="modal-content">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white bg-white/5 hover:bg-red-500/80 rounded-lg p-2 transition-colors">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="p-8">
+                <div class="text-center mb-8">
+                    <img src="logo.png" alt="AirSmp Logo" class="h-14 w-auto mx-auto mb-4 drop-shadow-[0_0_15px_rgba(0,162,255,0.3)]">
+                    <h3 class="text-2xl font-black text-white uppercase tracking-wider">Accedi / Registrati</h3>
+                    <p class="text-sm text-gray-400 mt-2">Gestisci il tuo account AirSmp</p>
+                </div>
+                <form class="space-y-4" onsubmit="event.preventDefault();">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1.5">Username Minecraft</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-user absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                            <input type="text" placeholder="Notch" class="w-full bg-darkbg border border-white/10 rounded-xl py-3 pl-10 pr-4 text-white focus:outline-none focus:border-skyblue/50 transition placeholder-gray-600">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1.5">Indirizzo Email</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-envelope absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                            <input type="email" placeholder="tua@email.com" class="w-full bg-darkbg border border-white/10 rounded-xl py-3 pl-10 pr-4 text-white focus:outline-none focus:border-skyblue/50 transition placeholder-gray-600">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1.5">Password</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-lock absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                            <input type="password" placeholder="••••••••" class="w-full bg-darkbg border border-white/10 rounded-xl py-3 pl-10 pr-4 text-white focus:outline-none focus:border-skyblue/50 transition placeholder-gray-600">
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-skyblue hover:bg-blue-500 text-white font-bold py-3.5 rounded-xl uppercase tracking-widest mt-6 shadow-lg shadow-skyblue/20 transition-colors">
+                        Conferma
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-30 w-full bg-darkbg/70 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex md:hidden">
+                <button id="menu-btn" class="text-gray-400 hover:text-white focus:outline-none p-2 rounded-lg hover:bg-white/5 transition">
+                    <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                </button>
+            </div>
+            <a href="index.html" class="absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0">
+                <img src="logo.png" alt="AirSmp Logo" class="h-10 sm:h-12 w-auto floating drop-shadow-[0_0_15px_rgba(0,162,255,0.2)]">
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide uppercase text-gray-300">
+                <a href="index.html" class="hover:text-skyblue transition-colors duration-200">Home</a>
+                <a href="index.html#modalita" class="hover:text-skyblue transition-colors duration-200">Modalità</a>
+                <a href="index.html#discord" class="hover:text-skyblue transition-colors duration-200">Discord</a>
+                <a href="#" class="hover:text-skyblue transition-colors duration-200 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 font-extrabold border-b-2 border-yellow-500 pb-1"><i class="fa-solid fa-shop mr-1"></i> Store</a>
+            </nav>
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <a href="#" class="p-2.5 text-skyblue bg-skyblue/10 rounded-xl transition border border-skyblue/20 relative">
+                    <i class="fa-solid fa-shopping-cart text-lg"></i>
+                    <span class="absolute top-1 right-1 w-2 h-2 bg-skyblue rounded-full animate-pulse"></span>
+                </a>
+                <button id="user-btn" class="p-2.5 text-gray-400 hover:text-skyblue bg-white/5 hover:bg-white/10 rounded-xl transition border border-white/5">
+                    <i class="fa-solid fa-user text-lg"></i>
+                </button>
+                <div class="flex items-center space-x-1 bg-white/5 border border-white/5 px-2.5 py-1.5 rounded-xl text-xs font-bold text-gray-300">
+                    <span class="w-3 h-2 bg-emerald-600 inline-block rounded-sm"></span>
+                    <span class="w-3 h-2 bg-white inline-block rounded-sm"></span>
+                    <span class="w-3 h-2 bg-red-600 inline-block rounded-sm"></span>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-darkbg border-b border-white/5 absolute top-20 left-0 w-full transition-all duration-300 shadow-2xl">
+            <div class="px-4 pt-4 pb-6 space-y-3 font-semibold text-gray-300 uppercase tracking-wider text-center">
+                <a href="index.html" class="block py-3 px-4 rounded-xl hover:bg-white/5 hover:text-white transition">Home</a>
+                <a href="index.html#modalita" class="block py-3 px-4 rounded-xl hover:bg-white/5 hover:text-white transition">Modalità</a>
+                <a href="index.html#discord" class="block py-3 px-4 rounded-xl hover:bg-white/5 hover:text-white transition">Discord</a>
+                <a href="#" class="block py-3 px-4 rounded-xl bg-gradient-to-r from-yellow-500/10 to-transparent text-yellow-500 border-l-4 border-yellow-500 font-extrabold">Store Pacchetti</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative min-h-screen">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,162,255,0.05),transparent_70%)] pointer-events-none -z-10"></div>
+
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-white uppercase drop-shadow-lg">AIRSMP STORE</h1>
+            <div class="h-1 w-20 bg-skyblue mx-auto my-6 rounded-full"></div>
+            <p class="text-gray-400 text-base sm:text-lg">Supporta il server acquistando i nostri pacchetti esclusivi per migliorare la tua avventura! Tutti gli acquisti sono sicuri e protetti al 100%.</p>
+        </div>
+
+        <div class="mb-24">
+            <div class="flex items-center space-x-3 mb-10">
+                <i class="fa-solid fa-key text-skyblue text-2xl"></i>
+                <h2 class="text-2xl font-extrabold tracking-wider text-white uppercase">CHIAVI CRATE PACCHETTI</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="bg-darkcard border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-skyblue/30 transition-all duration-300 relative group">
+                    <div>
+                        <div class="text-center py-6">
+                            <img src="immagini/chiave1.png" class="w-16 h-16 mx-auto" alt="Chiave">
+                        </div>
+                        <h3 class="font-bold text-white text-base uppercase mb-2">1x Common Key</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-6">Una common key.</p>
+                    </div>
+                    <div>
+                        <div class="text-lg font-black text-white mb-4">€0.99</div>
+                        <button class="w-full bg-skyblue hover:bg-blue-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+                    </div>
+                </div>
+
+                <div class="bg-darkcard border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-skyblue/30 transition-all duration-300 relative group">
+                    <div>
+                        <div class="text-center py-6">
+                            <img src="immagini/chiave2.png" class="w-16 h-16 mx-auto" alt="Chiave">
+                        </div>
+                        <h3 class="font-bold text-white text-base uppercase mb-2">1x Rare Key</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-6">Contiene oggetti utili e strumenti incantati.</p>
+                    </div>
+                    <div>
+                        <div class="text-lg font-black text-white mb-4">€2.99</div>
+                        <button class="w-full bg-skyblue hover:bg-blue-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+                    </div>
+                </div>
+
+                <div class="bg-darkcard border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-skyblue/30 transition-all duration-300 relative group">
+                    <div>
+                        <div class="text-center py-6">
+                            <img src="immagini/chiave3.png" class="w-16 h-16 mx-auto" alt="Chiave">
+                        </div>
+                        <h3 class="font-bold text-white text-base uppercase mb-2">1x Epic key</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-6">Armature e risorse avanzate per la tua sopravvivenza.</p>
+                    </div>
+                    <div>
+                        <div class="text-lg font-black text-white mb-4">€4.99</div>
+                        <button class="w-full bg-skyblue hover:bg-blue-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+                    </div>
+                </div>
+
+                <div class="bg-darkcard border-2 border-skyblue/40 rounded-2xl p-6 flex flex-col justify-between hover:border-skyblue transition-all duration-300 relative group shadow-lg shadow-skyblue/5 transform lg:-translate-y-2">
+                    <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-skyblue text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow">POPOLARE</span>
+                    <div>
+                        <div class="text-center py-6">
+                            <img src="immagini/chiave4.png" class="w-16 h-16 mx-auto" alt="Chiave">
+                        </div>
+                        <h3 class="font-bold text-white text-base uppercase mb-2">1x Legendary Key </h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-6">Grandissime probabilità di trovare loot rari e cosmetici.</p>
+                    </div>
+                    <div>
+                        <div class="text-lg font-black text-white mb-4">€9.99</div>
+                        <button class="w-full bg-skyblue hover:bg-blue-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+                    </div>
+                </div>
+
+                <div class="bg-darkcard border-2 border-yellow-500/40 rounded-2xl p-6 flex flex-col justify-between hover:border-yellow-500 transition-all duration-300 relative group shadow-lg shadow-yellow-500/5">
+                    <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-darkbg text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow">MIGLIOR VALORE</span>
+                    <div>
+                        <div class="text-center py-6">
+                            <img src="immagini/chiave5.png" class="w-16 h-16 mx-auto" alt="Chiave">
+                        </div>
+                        <h3 class="font-bold text-white text-base uppercase mb-2">1x Air Key (op) </h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-6">Il massimo del livello. Ricompense divine garantite.</p>
+                    </div>
+                    <div>
+                        <div class="text-lg font-black text-white mb-4">€19.99</div>
+                        <button class="w-full bg-yellow-500 hover:bg-yellow-400 text-darkbg font-extrabold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="mb-24">
+    <div class="flex items-center space-x-3 mb-10">
+        <img src="immagini/token_main.png" class="w-24 h-16" alt="Icona Token">
+        <h2 class="text-2xl font-extrabold tracking-wider text-white uppercase">AirTokens</h2>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-darkcard border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/30 transition-all duration-300 relative group">
+            <div class="text-center py-6">
+                <img src="immagini/token1.png" alt="160 AirToken" class="w-72 h-72 mx-auto">
+            </div>
+            <h3 class="font-bold text-white text-base uppercase mb-6">160 AirToken</h3>
+            <div class="text-lg font-black text-white mb-4">4.99€</div>
+            <button class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+        </div>
+
+        <div class="bg-darkcard border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/30 transition-all duration-300 relative group">
+            <div class="text-center py-6">
+                <img src="immagini/token2.png" alt="480 AirToken" class="w-72 h-72 mx-auto">
+            </div>
+            <h3 class="font-bold text-white text-base uppercase mb-6">480 AirToken</h3>
+            <div class="text-lg font-black text-white mb-4">9.99€</div>
+            <button class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+        </div>
+
+        <div class="bg-darkcard border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/30 transition-all duration-300 relative group">
+            <div class="text-center py-6">
+                <img src="immagini/token3.png" alt="800 AirToken" class="w-72 h-72 mx-auto">
+            </div>
+            <h3 class="font-bold text-white text-base uppercase mb-6">800 AirToken</h3>
+            <div class="text-lg font-black text-white mb-4">14.99€</div>
+            <button class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+        </div>
+
+        <div class="bg-darkcard border-2 border-emerald-500/40 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500 transition-all duration-300 relative group shadow-lg shadow-emerald-500/5">
+            <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow">BEST VALUE</span>
+            <div class="text-center py-6">
+                <img src="immagini/token4.png" alt="1600 AirToken" class="w-72 h-72 mx-auto">
+            </div>
+            <h3 class="font-bold text-white text-base uppercase mb-6">1600 AirToken</h3>
+            <div class="text-lg font-black text-white mb-4">24.99€</div>
+            <button class="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+        </div>
+    </div>
+</div>
+
+
+        <div class="mb-16">
+            <div class="flex items-center space-x-3 mb-10">
+                <i class="fa-solid fa-crown text-magentaVip text-2xl"></i>
+                <h2 class="text-2xl font-extrabold tracking-wider text-white uppercase">ABBONAMENTI VIP MENSILI</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-b from-darkcard to-darkbg border border-white/5 rounded-3xl p-8 flex flex-col justify-between hover:border-violaVip/30 transition-all duration-300 relative shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-xs font-black tracking-widest text-violaVip uppercase bg-violaVip/10 px-3 py-1 rounded-md border border-violaVip/20">Grado Bronzo</span>
+                            <img src="immagini/vip1.png" class="w-8 h-8" alt="VIP">
+                        </div>
+                        <h3 class="text-2xl font-black text-white uppercase mb-2">Abbonamento VIP</h3>
+                        <div class="text-xl font-black text-white mb-6">€4.99 <span class="text-xs text-gray-500 font-normal">/ Mese</span></div>
+                        <hr class="border-white/5 mb-6">
+                        <ul class="space-y-3.5 text-xs text-gray-300 font-medium">
+                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>Prefisso esclusivo <b class="text-white">[VIP]</b> in chat</span></li>
+                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>Slot riservato nel server pieno</span></li>
+                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>1x Kit VIP settimanale</span></li>
+                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>+2 Home massime impostabili</span></li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-violaVip hover:bg-purple-600 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition mt-8">Sblocca VIP</button>
+                </div>
+
+                <div class="bg-gradient-to-b from-darkcard to-darkbg border-2 border-magentaVip/40 rounded-3xl p-8 flex flex-col justify-between hover:border-magentaVip transition-all duration-300 relative shadow-xl shadow-magentaVip/5 transform md:-translate-y-4">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-xs font-black tracking-widest text-magentaVip uppercase bg-magentaVip/10 px-3 py-1 rounded-md border border-magentaVip/20">Grado Argento</span>
+                            <img src="immagini/vip2.png" class="w-8 h-8" alt="MVP">
+                        </div>
+                        <h3 class="text-2xl font-black text-white uppercase mb-2">Abbonamento MVP</h3>
+                        <div class="text-xl font-black text-white mb-6">€9.99 <span class="text-xs text-gray-500 font-normal">/ Mese</span></div>
+                        <hr class="border-white/5 mb-6">
+                        <ul class="space-y-3.5 text-xs text-gray-300 font-medium">
+                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>Prefisso esclusivo <b class="text-white">[MVP]</b> in chat</span></li>
+                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>Tutti i vantaggi del VIP</span></li>
+                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>Comandi estetici esclusivi</span></li>
+                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>2x Kit MVP settimanali</span></li>
+                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>Volo nelle lobby abilitato</span></li>
+                        </ul>
+                    </div>
+       
