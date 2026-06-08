@@ -143,80 +143,90 @@
                 <h2 class="text-2xl font-extrabold tracking-wider text-white uppercase">CHIAVI CRATE PACCHETTI</h2>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                <div class="bg-darkcard border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-skyblue/30 transition-all duration-300 relative group">
-                    <div>
-                        <div class="text-center py-6">
-                            <img src="immagini/chiave1.png" class="w-16 h-16 mx-auto" alt="Chiave">
-                        </div>
-                        <h3 class="font-bold text-white text-base uppercase mb-2">1x Common Key</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-6">Una common key.</p>
-                    </div>
-                    <div>
-                        <div class="text-lg font-black text-white mb-4">€0.99</div>
-                        <button class="w-full bg-skyblue hover:bg-blue-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
-                    </div>
-                </div>
-
-                <div class="bg-darkcard border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-skyblue/30 transition-all duration-300 relative group">
-                    <div>
-                        <div class="text-center py-6">
-                            <img src="immagini/chiave2.png" class="w-16 h-16 mx-auto" alt="Chiave">
-                        </div>
-                        <h3 class="font-bold text-white text-base uppercase mb-2">1x Rare Key</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-6">Contiene oggetti utili e strumenti incantati.</p>
-                    </div>
-                    <div>
-                        <div class="text-lg font-black text-white mb-4">€2.99</div>
-                        <button class="w-full bg-skyblue hover:bg-blue-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
-                    </div>
-                </div>
-
-                <div class="bg-darkcard border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-skyblue/30 transition-all duration-300 relative group">
-                    <div>
-                        <div class="text-center py-6">
-                            <img src="immagini/chiave3.png" class="w-16 h-16 mx-auto" alt="Chiave">
-                        </div>
-                        <h3 class="font-bold text-white text-base uppercase mb-2">1x Epic key</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-6">Armature e risorse avanzate per la tua sopravvivenza.</p>
-                    </div>
-                    <div>
-                        <div class="text-lg font-black text-white mb-4">€4.99</div>
-                        <button class="w-full bg-skyblue hover:bg-blue-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
-                    </div>
-                </div>
-
-                <div class="bg-darkcard border-2 border-skyblue/40 rounded-2xl p-6 flex flex-col justify-between hover:border-skyblue transition-all duration-300 relative group shadow-lg shadow-skyblue/5 transform lg:-translate-y-2">
-                    <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-skyblue text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow">POPOLARE</span>
-                    <div>
-                        <div class="text-center py-6">
-                            <img src="immagini/chiave4.png" class="w-16 h-16 mx-auto" alt="Chiave">
-                        </div>
-                        <h3 class="font-bold text-white text-base uppercase mb-2">1x Legendary Key </h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-6">Grandissime probabilità di trovare loot rari e cosmetici.</p>
-                    </div>
-                    <div>
-                        <div class="text-lg font-black text-white mb-4">€9.99</div>
-                        <button class="w-full bg-skyblue hover:bg-blue-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
-                    </div>
-                </div>
-
-                <div class="bg-darkcard border-2 border-yellow-500/40 rounded-2xl p-6 flex flex-col justify-between hover:border-yellow-500 transition-all duration-300 relative group shadow-lg shadow-yellow-500/5">
-                    <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-darkbg text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow">MIGLIOR VALORE</span>
-                    <div>
-                        <div class="text-center py-6">
-                            <img src="immagini/chiave5.png" class="w-16 h-16 mx-auto" alt="Chiave">
-                        </div>
-                        <h3 class="font-bold text-white text-base uppercase mb-2">1x Air Key (op) </h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-6">Il massimo del livello. Ricompense divine garantite.</p>
-                    </div>
-                    <div>
-                        <div class="text-lg font-black text-white mb-4">€19.99</div>
-                        <button class="w-full bg-yellow-500 hover:bg-yellow-400 text-darkbg font-extrabold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
-                    </div>
-                </div>
+ <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+    <div class="bg-gradient-to-b from-darkcard2 via-darkcard to-darkbg border border-skyblue/15 rounded-2xl p-5 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-skyblue/40 hover:shadow-[0_0_30px_rgba(0,162,255,0.15)] group relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-24 h-24 bg-skyblue/10 blur-3xl rounded-full pointer-events-none"></div>
+        <div>
+            <div class="relative w-full h-32 flex items-center justify-center mb-4 rounded-xl bg-darkbg/40 border border-white/[0.03]">
+                <div class="absolute w-20 h-20 rounded-full bg-skyblue/15 blur-2xl group-hover:bg-skyblue/25 transition-all"></div>
+                <img src="immagini/chiave1.png" class="max-w-[75%] max-h-[75%] object-contain relative z-10 filter drop-shadow-[0_5px_10px_rgba(0,162,255,0.3)] group-hover:scale-110 transition-transform duration-500" alt="Common Key">
             </div>
+            <h3 class="font-bold text-white text-sm uppercase mb-2 group-hover:text-skyblue transition-colors">1x Common Key</h3>
+            <p class="text-[10px] text-gray-400 leading-relaxed mb-4">Una common key per ricompense base.</p>
         </div>
+        <div class="mt-auto">
+            <div class="text-lg font-black text-white mb-3">€0.99</div>
+            <button class="w-full bg-gradient-to-r from-skyblue to-blue-600 hover:from-blue-500 hover:to-skyblue text-white font-bold py-2.5 rounded-xl text-xs uppercase transition-all shadow-lg shadow-skyblue/20">Acquista</button>
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-b from-darkcard2 via-darkcard to-darkbg border border-skyblue/15 rounded-2xl p-5 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-skyblue/40 hover:shadow-[0_0_30px_rgba(0,162,255,0.15)] group relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-24 h-24 bg-skyblue/10 blur-3xl rounded-full pointer-events-none"></div>
+        <div>
+            <div class="relative w-full h-32 flex items-center justify-center mb-4 rounded-xl bg-darkbg/40 border border-white/[0.03]">
+                <div class="absolute w-20 h-20 rounded-full bg-skyblue/15 blur-2xl group-hover:bg-skyblue/25 transition-all"></div>
+                <img src="immagini/chiave2.png" class="max-w-[75%] max-h-[75%] object-contain relative z-10 filter drop-shadow-[0_5px_10px_rgba(0,162,255,0.3)] group-hover:scale-110 transition-transform duration-500" alt="Rare Key">
+            </div>
+            <h3 class="font-bold text-white text-sm uppercase mb-2 group-hover:text-skyblue transition-colors">1x Rare Key</h3>
+            <p class="text-[10px] text-gray-400 leading-relaxed mb-4">Contiene oggetti utili e strumenti incantati.</p>
+        </div>
+        <div class="mt-auto">
+            <div class="text-lg font-black text-white mb-3">€2.99</div>
+            <button class="w-full bg-gradient-to-r from-skyblue to-blue-600 hover:from-blue-500 hover:to-skyblue text-white font-bold py-2.5 rounded-xl text-xs uppercase transition-all shadow-lg shadow-skyblue/20">Acquista</button>
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-b from-darkcard2 via-darkcard to-darkbg border border-skyblue/15 rounded-2xl p-5 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-skyblue/40 hover:shadow-[0_0_30px_rgba(0,162,255,0.15)] group relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-24 h-24 bg-skyblue/10 blur-3xl rounded-full pointer-events-none"></div>
+        <div>
+            <div class="relative w-full h-32 flex items-center justify-center mb-4 rounded-xl bg-darkbg/40 border border-white/[0.03]">
+                <div class="absolute w-20 h-20 rounded-full bg-skyblue/15 blur-2xl group-hover:bg-skyblue/25 transition-all"></div>
+                <img src="immagini/chiave3.png" class="max-w-[75%] max-h-[75%] object-contain relative z-10 filter drop-shadow-[0_5px_10px_rgba(0,162,255,0.3)] group-hover:scale-110 transition-transform duration-500" alt="Epic Key">
+            </div>
+            <h3 class="font-bold text-white text-sm uppercase mb-2 group-hover:text-skyblue transition-colors">1x Epic key</h3>
+            <p class="text-[10px] text-gray-400 leading-relaxed mb-4">Armature e risorse avanzate per la sopravvivenza.</p>
+        </div>
+        <div class="mt-auto">
+            <div class="text-lg font-black text-white mb-3">€4.99</div>
+            <button class="w-full bg-gradient-to-r from-skyblue to-blue-600 hover:from-blue-500 hover:to-skyblue text-white font-bold py-2.5 rounded-xl text-xs uppercase transition-all shadow-lg shadow-skyblue/20">Acquista</button>
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-b from-darkcard2 via-darkcard to-darkbg border border-magentaVip/30 rounded-2xl p-5 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-magentaVip/60 hover:shadow-[0_0_30px_rgba(217,70,239,0.2)] group relative overflow-hidden transform lg:-translate-y-2">
+        <span class="absolute top-0 left-1/2 transform -translate-x-1/2 bg-magentaVip text-white text-[9px] font-black uppercase tracking-widest px-4 py-1 rounded-b-lg shadow-lg z-20">POPOLARE</span>
+        <div class="absolute -top-10 -right-10 w-24 h-24 bg-magentaVip/10 blur-3xl rounded-full pointer-events-none"></div>
+        <div class="pt-2">
+            <div class="relative w-full h-32 flex items-center justify-center mb-4 rounded-xl bg-darkbg/40 border border-white/[0.03]">
+                <div class="absolute w-20 h-20 rounded-full bg-magentaVip/20 blur-2xl group-hover:bg-magentaVip/30 transition-all"></div>
+                <img src="immagini/chiave4.png" class="max-w-[75%] max-h-[75%] object-contain relative z-10 filter drop-shadow-[0_5px_10px_rgba(217,70,239,0.4)] group-hover:scale-110 transition-transform duration-500" alt="Legendary Key">
+            </div>
+            <h3 class="font-bold text-white text-sm uppercase mb-2 group-hover:text-magentaVip transition-colors">1x Legendary Key</h3>
+            <p class="text-[10px] text-gray-400 leading-relaxed mb-4">Loot rari e cosmetici garantiti.</p>
+        </div>
+        <div class="mt-auto">
+            <div class="text-lg font-black text-pink-400 mb-3">€9.99</div>
+            <button class="w-full bg-gradient-to-r from-magentaVip to-pink-600 hover:from-pink-600 hover:to-magentaVip text-white font-bold py-2.5 rounded-xl text-xs uppercase transition-all shadow-lg shadow-magentaVip/20">Acquista</button>
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-b from-darkcard2 via-darkcard to-darkbg border border-yellow-500/30 rounded-2xl p-5 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-yellow-500/60 hover:shadow-[0_0_30px_rgba(234,179,8,0.2)] group relative overflow-hidden">
+        <span class="absolute top-0 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-darkbg text-[9px] font-black uppercase tracking-widest px-4 py-1 rounded-b-lg shadow-lg z-20">MIGLIOR VALORE</span>
+        <div class="absolute -top-10 -right-10 w-24 h-24 bg-yellow-500/10 blur-3xl rounded-full pointer-events-none"></div>
+        <div class="pt-2">
+            <div class="relative w-full h-32 flex items-center justify-center mb-4 rounded-xl bg-darkbg/40 border border-white/[0.03]">
+                <div class="absolute w-20 h-20 rounded-full bg-yellow-500/20 blur-2xl group-hover:bg-yellow-500/30 transition-all"></div>
+                <img src="immagini/chiave5.png" class="max-w-[75%] max-h-[75%] object-contain relative z-10 filter drop-shadow-[0_5px_10px_rgba(234,179,8,0.4)] group-hover:scale-110 transition-transform duration-500" alt="Air Key">
+            </div>
+            <h3 class="font-bold text-white text-sm uppercase mb-2 group-hover:text-yellow-400 transition-colors">1x Air Key (OP)</h3>
+            <p class="text-[10px] text-gray-400 leading-relaxed mb-4">Il massimo del livello. Ricompense divine.</p>
+        </div>
+        <div class="mt-auto">
+            <div class="text-lg font-black text-yellow-400 mb-3">€19.99</div>
+            <button class="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-amber-600 hover:to-yellow-500 text-darkbg font-extrabold py-2.5 rounded-xl text-xs uppercase transition-all shadow-lg shadow-yellow-500/20">Acquista</button>
+        </div>
+    </div>
+</div>
+
 
 <div class="mb-24">
     <div class="flex items-center space-x-3 mb-10">
@@ -225,87 +235,130 @@
     </div>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-darkcard border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/30 transition-all duration-300 relative group">
-            <div class="text-center py-6">
-                <img src="immagini/token1.png" alt="160 AirToken" class="w-72 h-72 mx-auto">
+    <div class="bg-gradient-to-b from-darkcard2 via-darkcard to-darkbg border border-amber-500/15 rounded-2xl p-5 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_0_40px_rgba(245,158,11,0.15)] group relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-24 h-24 bg-amber-500/10 blur-3xl rounded-full pointer-events-none"></div>
+        <div>
+            <div class="relative w-full h-52 flex items-center justify-center mb-4 rounded-xl bg-darkbg/40 border border-white/[0.03]">
+                <div class="absolute w-20 h-32 rounded-[100%] bg-amber-500/15 blur-2xl group-hover:bg-amber-500/30 transition-all"></div>
+                <img src="immagini/token1.png" alt="160 AirToken" class="h-[90%] object-contain relative z-10 filter drop-shadow-[0_6px_12px_rgba(245,158,11,0.35)] group-hover:scale-105 transition-transform duration-500">
             </div>
-            <h3 class="font-bold text-white text-base uppercase mb-6">160 AirToken</h3>
-            <div class="text-lg font-black text-white mb-4">4.99€</div>
-            <button class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+            <h3 class="font-bold text-white text-sm uppercase mb-4 group-hover:text-amber-400 transition-colors">160 AirToken</h3>
         </div>
-
-        <div class="bg-darkcard border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/30 transition-all duration-300 relative group">
-            <div class="text-center py-6">
-                <img src="immagini/token2.png" alt="480 AirToken" class="w-72 h-72 mx-auto">
-            </div>
-            <h3 class="font-bold text-white text-base uppercase mb-6">480 AirToken</h3>
-            <div class="text-lg font-black text-white mb-4">9.99€</div>
-            <button class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+        <div class="mt-auto">
+            <div class="text-lg font-black text-amber-400 mb-3">4.99€</div>
+            <button class="w-full bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-yellow-500 hover:to-amber-400 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition shadow-lg shadow-amber-500/20">Acquista</button>
         </div>
+    </div>
 
-        <div class="bg-darkcard border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/30 transition-all duration-300 relative group">
-            <div class="text-center py-6">
-                <img src="immagini/token3.png" alt="800 AirToken" class="w-72 h-72 mx-auto">
+    <div class="bg-gradient-to-b from-darkcard2 via-darkcard to-darkbg border border-amber-500/30 rounded-2xl p-5 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-amber-500/60 hover:shadow-[0_0_40px_rgba(245,158,11,0.2)] group relative overflow-hidden transform lg:-translate-y-1">
+        <span class="absolute top-0 left-1/2 transform -translate-x-1/2 bg-amber-500 text-darkbg text-[9px] font-black uppercase tracking-widest px-4 py-1 rounded-b-lg shadow-lg z-20">POPOLARE</span>
+        <div class="absolute -top-10 -right-10 w-24 h-24 bg-amber-500/15 blur-3xl rounded-full pointer-events-none"></div>
+        <div class="pt-2">
+            <div class="relative w-full h-52 flex items-center justify-center mb-4 rounded-xl bg-darkbg/40 border border-white/[0.03]">
+                <div class="absolute w-20 h-32 rounded-[100%] bg-amber-500/20 blur-2xl group-hover:bg-amber-500/35 transition-all"></div>
+                <img src="immagini/token2.png" alt="480 AirToken" class="h-[90%] object-contain relative z-10 filter drop-shadow-[0_6px_12px_rgba(245,158,11,0.4)] group-hover:scale-105 transition-transform duration-500">
             </div>
-            <h3 class="font-bold text-white text-base uppercase mb-6">800 AirToken</h3>
-            <div class="text-lg font-black text-white mb-4">14.99€</div>
-            <button class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+            <h3 class="font-bold text-white text-sm uppercase mb-4 group-hover:text-amber-400 transition-colors">480 AirToken</h3>
         </div>
+        <div class="mt-auto">
+            <div class="text-lg font-black text-amber-400 mb-3">9.99€</div>
+            <button class="w-full bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-yellow-500 hover:to-amber-400 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition shadow-lg shadow-amber-500/20">Acquista</button>
+        </div>
+    </div>
 
-        <div class="bg-darkcard border-2 border-emerald-500/40 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500 transition-all duration-300 relative group shadow-lg shadow-emerald-500/5">
-            <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow">BEST VALUE</span>
-            <div class="text-center py-6">
-                <img src="immagini/token4.png" alt="1600 AirToken" class="w-72 h-72 mx-auto">
+    <div class="bg-gradient-to-b from-darkcard2 via-darkcard to-darkbg border border-amber-500/15 rounded-2xl p-5 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_0_40px_rgba(245,158,11,0.15)] group relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-24 h-24 bg-amber-500/10 blur-3xl rounded-full pointer-events-none"></div>
+        <div>
+            <div class="relative w-full h-52 flex items-center justify-center mb-4 rounded-xl bg-darkbg/40 border border-white/[0.03]">
+                <div class="absolute w-20 h-32 rounded-[100%] bg-amber-500/15 blur-2xl group-hover:bg-amber-500/30 transition-all"></div>
+                <img src="immagini/token3.png" alt="800 AirToken" class="h-[90%] object-contain relative z-10 filter drop-shadow-[0_6px_12px_rgba(245,158,11,0.35)] group-hover:scale-105 transition-transform duration-500">
             </div>
-            <h3 class="font-bold text-white text-base uppercase mb-6">1600 AirToken</h3>
-            <div class="text-lg font-black text-white mb-4">24.99€</div>
-            <button class="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition">Acquista</button>
+            <h3 class="font-bold text-white text-sm uppercase mb-4 group-hover:text-amber-400 transition-colors">800 AirToken</h3>
+        </div>
+        <div class="mt-auto">
+            <div class="text-lg font-black text-amber-400 mb-3">14.99€</div>
+            <button class="w-full bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-yellow-500 hover:to-amber-400 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wide transition shadow-lg shadow-amber-500/20">Acquista</button>
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-b from-darkcard2 via-darkcard to-darkbg border border-yellow-500/40 rounded-2xl p-5 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-yellow-500/60 hover:shadow-[0_0_40px_rgba(234,179,8,0.25)] group relative overflow-hidden transform lg:-translate-y-1">
+        <span class="absolute top-0 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-darkbg text-[9px] font-black uppercase tracking-widest px-4 py-1 rounded-b-lg shadow-lg z-20">BEST VALUE</span>
+        <div class="absolute -top-10 -right-10 w-24 h-24 bg-yellow-500/15 blur-3xl rounded-full pointer-events-none"></div>
+        <div class="pt-2">
+            <div class="relative w-full h-52 flex items-center justify-center mb-4 rounded-xl bg-darkbg/40 border border-white/[0.03]">
+                <div class="absolute w-20 h-32 rounded-[100%] bg-yellow-500/20 blur-2xl group-hover:bg-yellow-500/35 transition-all"></div>
+                <img src="immagini/token4.png" alt="1600 AirToken" class="h-[90%] object-contain relative z-10 filter drop-shadow-[0_6px_12px_rgba(251,191,36,0.45)] group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <h3 class="font-bold text-white text-sm uppercase mb-4 group-hover:text-yellow-400 transition-colors">1600 AirToken</h3>
+        </div>
+        <div class="mt-auto">
+            <div class="text-lg font-black text-yellow-400 mb-3">24.99€</div>
+            <button class="w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-400 text-darkbg font-extrabold py-2.5 rounded-xl text-xs uppercase tracking-wide transition shadow-lg shadow-yellow-500/30">Acquista</button>
         </div>
     </div>
 </div>
 
 
-        <div class="mb-16">
-            <div class="flex items-center space-x-3 mb-10">
-                <i class="fa-solid fa-crown text-magentaVip text-2xl"></i>
-                <h2 class="text-2xl font-extrabold tracking-wider text-white uppercase">ABBONAMENTI VIP MENSILI</h2>
+
+<div class="border-t border-white/5 pt-16 mt-20">
+    <div class="text-center mb-12">
+        <h2 class="text-2xl font-extrabold tracking-wider text-white uppercase">Abbonamenti VIP</h2>
+        <p class="text-gray-500 text-xs mt-2">Scegli il grado perfetto per supportare il server e ottenere vantaggi esclusivi</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="bg-gradient-to-b from-darkcard2 via-darkcard to-darkbg border border-violaVip/20 rounded-3xl p-8 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-violaVip/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.15)] group relative overflow-hidden">
+            <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-40 group-hover:opacity-60 transition-opacity duration-500">
+                <img src="immagini/vip1.png" alt="VIP Background" class="w-full h-full object-cover object-[65%_center]">
+                <div class="absolute inset-0 bg-gradient-to-t from-darkbg via-darkbg/80 to-darkcard2/40"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-b from-darkcard to-darkbg border border-white/5 rounded-3xl p-8 flex flex-col justify-between hover:border-violaVip/30 transition-all duration-300 relative shadow-xl">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <span class="text-xs font-black tracking-widest text-violaVip uppercase bg-violaVip/10 px-3 py-1 rounded-md border border-violaVip/20">Grado Bronzo</span>
-                            <img src="immagini/vip1.png" class="w-8 h-8" alt="VIP">
-                        </div>
-                        <h3 class="text-2xl font-black text-white uppercase mb-2">Abbonamento VIP</h3>
-                        <div class="text-xl font-black text-white mb-6">€4.99 <span class="text-xs text-gray-500 font-normal">/ Mese</span></div>
-                        <hr class="border-white/5 mb-6">
-                        <ul class="space-y-3.5 text-xs text-gray-300 font-medium">
-                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>Prefisso esclusivo <b class="text-white">[VIP]</b> in chat</span></li>
-                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>Slot riservato nel server pieno</span></li>
-                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>1x Kit VIP settimanale</span></li>
-                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>+2 Home massime impostabili</span></li>
-                        </ul>
-                    </div>
-                    <button class="w-full bg-violaVip hover:bg-purple-600 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition mt-8">Sblocca VIP</button>
+            <div class="relative z-10">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="bg-violaVip/10 text-violaVip border border-violaVip/20 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Grado Bronzo</span>
                 </div>
+                <h3 class="text-2xl font-black text-white uppercase mb-2">Abbonamento VIP</h3>
+                <div class="text-xl font-black text-white mb-6">€4.99 <span class="text-xs text-gray-500 font-normal">/ Mese</span></div>
+                <hr class="border-white/5 mb-6">
+                <ul class="space-y-3.5 text-xs text-gray-300 font-medium">
+                    <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>Prefisso esclusivo <b class="text-white">[VIP]</b> in chat</span></li>
+                    <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>Accesso al server anche quando è pieno</span></li>
+                    <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>Priorità assoluta nelle code di accesso</span></li>
+                    <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>1x Kit VIP settimanale esclusivo</span></li>
+                    <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-violaVip mt-0.5"></i> <span>Slot case extra nei tuoi claim (+2)</span></li>
+                </ul>
+            </div>
+            <div class="mt-8 relative z-10">
+                <button class="w-full bg-gradient-to-r from-purple-600 to-violaVip hover:from-violaVip hover:to-purple-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wide transition shadow-lg shadow-purple-500/20">Sblocca Vip</button>
+            </div>
+        </div>
 
-                <div class="bg-gradient-to-b from-darkcard to-darkbg border-2 border-magentaVip/40 rounded-3xl p-8 flex flex-col justify-between hover:border-magentaVip transition-all duration-300 relative shadow-xl shadow-magentaVip/5 transform md:-translate-y-4">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <span class="text-xs font-black tracking-widest text-magentaVip uppercase bg-magentaVip/10 px-3 py-1 rounded-md border border-magentaVip/20">Grado Argento</span>
-                            <img src="immagini/vip2.png" class="w-8 h-8" alt="MVP">
-                        </div>
-                        <h3 class="text-2xl font-black text-white uppercase mb-2">Abbonamento MVP</h3>
-                        <div class="text-xl font-black text-white mb-6">€9.99 <span class="text-xs text-gray-500 font-normal">/ Mese</span></div>
-                        <hr class="border-white/5 mb-6">
-                        <ul class="space-y-3.5 text-xs text-gray-300 font-medium">
-                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>Prefisso esclusivo <b class="text-white">[MVP]</b> in chat</span></li>
-                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>Tutti i vantaggi del VIP</span></li>
-                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>Comandi estetici esclusivi</span></li>
-                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>2x Kit MVP settimanali</span></li>
-                            <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>Volo nelle lobby abilitato</span></li>
-                        </ul>
-                    </div>
-       
+        <div class="bg-gradient-to-b from-darkcard2 via-darkcard to-darkbg border border-magentaVip/30 rounded-3xl p-8 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:border-magentaVip/60 hover:shadow-[0_0_50px_rgba(217,70,239,0.2)] group relative overflow-hidden transform lg:-translate-y-2">
+            <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-40 group-hover:opacity-60 transition-opacity duration-500">
+                <img src="immagini/vip2.png" alt="MVP Background" class="w-full h-full object-cover object-[65%_center]">
+                <div class="absolute inset-0 bg-gradient-to-t from-darkbg via-darkbg/80 to-darkcard2/40"></div>
+            </div>
+
+            <span class="absolute top-0 right-8 bg-magentaVip text-white text-[9px] font-black uppercase tracking-widest px-4 py-1.5 rounded-b-lg shadow-lg z-20">PIÙ VENDUTO</span>
+            
+            <div class="relative z-10 pt-2">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="bg-magentaVip/10 text-magentaVip border border-magentaVip/20 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Grado Argento</span>
+                </div>
+                <h3 class="text-2xl font-black text-white uppercase mb-2">Abbonamento MVP</h3>
+                <div class="text-xl font-black text-white mb-6">€9.99 <span class="text-xs text-gray-500 font-normal">/ Mese</span></div>
+                <hr class="border-white/5 mb-6">
+                <ul class="space-y-3.5 text-xs text-gray-300 font-medium">
+                    <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>Prefisso esclusivo <b class="text-white">[MVP]</b> in chat</span></li>
+                    <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>Tutti i vantaggi del VIP inclusi</span></li>
+                    <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>Comandi estetici esclusivi in gioco</span></li>
+                    <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>2x Kit MVP settimanali ricchi</span></li>
+                    <li class="flex items-start space-x-2.5"><i class="fa-solid fa-square-check text-magentaVip mt-0.5"></i> <span>Slot case extra nei tuoi claim (+5)</span></li>
+                </ul>
+            </div>
+            <div class="mt-8 relative z-10">
+                <button class="w-full bg-gradient-to-r from-pink-600 to-magentaVip hover:from-magentaVip hover:to-pink-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wide transition shadow-lg shadow-pink-500/20">Sblocca Mvp</button>
+            </div>
+        </div>
+    </div>
+</div>
