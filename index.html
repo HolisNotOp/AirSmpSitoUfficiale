@@ -135,7 +135,7 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-darkbg border-b border-white/5 absolute top-20 left-0 w-full transition-all duration-300 shadow-2xl">
+     <div id="mobile-menu" class="opacity-0 pointer-events-none -translate-y-4 md:hidden bg-darkbg border-b border-white/5 absolute top-20 left-0 w-full transition-all duration-300 ease-in-out shadow-2xl z-40">
             <div class="px-4 pt-4 pb-6 space-y-3 font-semibold text-gray-300 uppercase tracking-wider text-center">
                 <a href="#" class="block py-3 px-4 rounded-xl bg-white/5 text-white border-l-4 border-skyblue">Home</a>
                 <a href="#modalita" class="block py-3 px-4 rounded-xl hover:bg-white/5 hover:text-white transition">Modalità</a>
@@ -305,19 +305,53 @@
             }, 2000);
         });
 
-        // 2. RIPRISTINO E FIX DEL MENU MOBILE (Che nel tuo testo era tagliato a metà)
+        /* MODIFICA SOLO QUESTO: 2. RIPRISTINO E FIX DEL MENU MOBILE */
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
+        const menuLinks = mobileMenu.querySelectorAll('a');
 
         menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.className = "fa-solid fa-bars text-2xl";
+            // Animazione fluida di apertura/chiusura
+            mobileMenu.classList.toggle('opacity-0');
+            mobileMenu.classList.toggle('pointer-events-none');
+            mobileMenu.classList.toggle('-translate-y-4');
+            mobileMenu.classList.toggle('opacity-100');
+            mobileMenu.classList.toggle('pointer-events-auto');
+            mobileMenu.classList.toggle('translate-y-0');
+
+            // Rotazione animata dell'icona
+            if (mobileMenu.classList.contains('opacity-0')) {
+                menuIcon.className = "fa-solid fa-bars text-2xl transition-transform duration-300";
             } else {
-                menuIcon.className = "fa-solid fa-xmark text-2xl";
+                menuIcon.className = "fa-solid fa-xmark text-2xl transition-transform duration-300 rotate-90";
             }
         });
+
+        // Evidenziazione dinamica della voce cliccata e chiusura automatica
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Rimuovi lo stato attivo da tutte le voci "normali"
+                menuLinks.forEach(l => {
+                    if (!l.classList.contains('font-extrabold')) { 
+                        l.classList.remove('bg-white/5', 'text-white', 'border-l-4', 'border-skyblue');
+                        l.classList.add('text-gray-300');
+                    }
+                });
+
+                // Aggiungi lo stato attivo alla voce cliccata (salta lo Store che ha già il gradiente dedicato)
+                if (!this.classList.contains('font-extrabold')) {
+                    this.classList.remove('text-gray-300');
+                    this.classList.add('bg-white/5', 'text-white', 'border-l-4', 'border-skyblue');
+                }
+
+                // Chiudi automaticamente il menu con un leggero ritardo
+                setTimeout(() => {
+                    if (!mobileMenu.classList.contains('opacity-0')) menuBtn.click();
+                }, 200);
+            });
+        });
+        
 
         // 3. LOGICA DI APERTURA/CHIUSURA DELLA FINESTRA ACCOUNT (MODALE)
         const userBtn = document.getElementById('user-btn');
